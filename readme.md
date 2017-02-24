@@ -33,6 +33,18 @@ This exposes a series of functions to your application:
 +	`relay_off(int_value)` - Turns a single relay on. Pass an integer value between 1 and 4 (inclusive) to the function to specify the relay you wish to turn on. For example: `relay_on(4)` will turn the first relay (which is actually relay `3` internally) off.
 +	`relay_all_on()` - Turns all of the relays on simultaneously.    
 +	`relay_all_off()` - Turns all of the relays off simultaneously.
++	`relay_toggle_port` - Toggles the status of the specified relay. If it's on, the module will turn it off. If it's off, the module will turn it on. Cool, right?
++	`relay_get_port_status` - Returns a Boolean value indicating the status of the specified relay. `True` if the relay is on, `false` if the relay is off. This function was added to enable the capabilities of the `relay_toggle_port` function described previously.
++	`relay_get_port_data` - Returns an integer value representing the current state of the relay board. This function is used internally by `relay_get_port_status`. The first four bits of the result indicate the status of the board's relays. From right to left, bit 0 represents relay 1, bit 1 represents relay 2, and so on, as shown in the following table. A zero in the bit position indicates that the relay is on.
+
+Bit Values from `relay_get_port_data`
+
+| Relay | Off       | On (binary) | On (Integer) |
+|-------|-----------|-------------|--------------| 
+| 1     | 1111 1111 | 1111 1110   | 254          |
+| 2     | 1111 1111 | 1111 1101   | 253          |
+| 3     | 1111 1111 | 1111 1011   | 251          |
+| 4     | 1111 1111 | 1111 0111   | 247          |
 
 The module exposes a configuration value you will want to keep in mind as you work with the board:
 
@@ -76,8 +88,11 @@ The code that does all this looks like the following:
 
 That's it, that's all there is to it.
 
+## Update History
+
+02/24/2017 - Added the ability to toggle a specific relay's status using `relay_toggle_port` also added functions for reading data from the relay board (in support of the toggle function).
+
+
 ***
 
-If you find this code useful, and feel like thanking me for providing it, please consider making a purchase from [my Amazon Wish List](https://amzn.com/w/1WI6AAUKPT5P9). You can find information on many different topics on my [personal blog](http://www.johnwargo.com). Learn about all of my publications at [John Wargo Books](http://www.johnwargobooks.com). 
-
-
+If you find this code useful, and feel like thanking me for providing it, please consider making a purchase from [my Amazon Wish List](https://amzn.com/w/1WI6AAUKPT5P9). You can find information on many different topics on my [personal blog](http://www.johnwargo.com). Learn about all of my publications at [John Wargo Books](http://www.johnwargobooks.com).
