@@ -1,5 +1,7 @@
 # Seed Studio Relay Board
 
+> **Note:** I created an updated (but not tested), version of the library at [https://github.com/johnwargo/seeed-studio-relay-v2](https://github.com/johnwargo/seeed-studio-relay-v2). This version supports multiple relay boards and has not been tested.
+
 I had an idea for a project, a Raspberry Pi-based power controller for my media center. I searched around for relay boards, and discovered the [Seeed Studio Raspberry Pi Relay Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html), so I thought I'd give it a try.
 
 > **Note**: At the time, this was the only directly-mountable relay board I could find for the Raspberry Pi. Since then, I found another one in the [ModMyPi PiOT Relay Board](https://www.modmypi.com/raspberry-pi/breakout-boards/modmypi/modmypi-piot-relay-board). I'll play with that one soon and publish my findings on [wwwjohnwargo.com](http://johnwargo.com); stay tuned.
