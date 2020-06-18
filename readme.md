@@ -1,6 +1,6 @@
-# Seed Studio Relay Board
+# Seeed Studio Relay Board
 
-> **Note:** I created an updated (but not tested), version of the library at [https://github.com/johnwargo/seeed-studio-relay-v2](https://github.com/johnwargo/seeed-studio-relay-v2); this version supports multiple relay boards.
+> **Note:** I created an updated (but not tested), version of the library at [Seeed Studio Relay V2](https://github.com/johnwargo/seeed-studio-relay-v2); this version supports multiple relay boards.
 
 I had an idea for a project, a Raspberry Pi-based power controller for my media center. I searched around for relay boards, and discovered the [Seeed Studio Raspberry Pi Relay Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-Relay-Board-v1.0-p-2409.html), so I thought I'd give it a try.
 
